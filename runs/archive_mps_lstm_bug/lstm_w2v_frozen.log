@@ -1,0 +1,89 @@
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:131: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emb = torch.load(args.embedding_path)
+[params] {'total': 27274589, 'trainable': 18600689, 'input_embedding': 8673900, 'output_layer': 14832369, 'body': 3768320, 'size_mb_fp32': 104.0443000793457}
+  ep 1 step 100/5070 loss 7.188 gnorm 0.51
+  ep 1 step 200/5070 loss 7.419 gnorm 0.80
+  ep 1 step 300/5070 loss 7.487 gnorm 0.72
+  ep 1 step 400/5070 loss 7.310 gnorm 0.63
+  ep 1 step 500/5070 loss 6.683 gnorm 0.19
+[epoch 1] train 7.3706 | val 6.2531 (ppl 519.6) | 292s
+  ep 2 step 600/5070 loss 6.327 gnorm 0.19
+  ep 2 step 700/5070 loss 6.032 gnorm 0.17
+  ep 2 step 800/5070 loss 6.228 gnorm 0.18
+  ep 2 step 900/5070 loss 5.909 gnorm 0.17
+  ep 2 step 1000/5070 loss 5.955 gnorm 0.14
+[epoch 2] train 6.1821 | val 5.6944 (ppl 297.2) | 298s
+  ep 3 step 1100/5070 loss 5.909 gnorm 0.15
+  ep 3 step 1200/5070 loss 5.760 gnorm 0.15
+  ep 3 step 1300/5070 loss 5.927 gnorm 0.16
+  ep 3 step 1400/5070 loss 5.809 gnorm 0.15
+  ep 3 step 1500/5070 loss 5.831 gnorm 0.14
+[epoch 3] train 5.8198 | val 5.5100 (ppl 247.1) | 301s
+  ep 4 step 1600/5070 loss 5.711 gnorm 0.16
+  ep 4 step 1700/5070 loss 5.540 gnorm 0.14
+  ep 4 step 1800/5070 loss 5.515 gnorm 0.16
+  ep 4 step 1900/5070 loss 5.630 gnorm 0.15
+  ep 4 step 2000/5070 loss 5.572 gnorm 0.15
+[epoch 4] train 5.6007 | val 5.3555 (ppl 211.8) | 378s
+  ep 5 step 2100/5070 loss 5.536 gnorm 0.15
+  ep 5 step 2200/5070 loss 5.496 gnorm 0.16
+  ep 5 step 2300/5070 loss 5.479 gnorm 0.16
+  ep 5 step 2400/5070 loss 5.417 gnorm 0.16
+  ep 5 step 2500/5070 loss 5.290 gnorm 0.16
+[epoch 5] train 5.4412 | val 5.2670 (ppl 193.8) | 539s
+  ep 6 step 2600/5070 loss 5.272 gnorm 0.16
+  ep 6 step 2700/5070 loss 5.343 gnorm 0.16
+  ep 6 step 2800/5070 loss 5.297 gnorm 0.16
+  ep 6 step 2900/5070 loss 5.385 gnorm 0.16
+  ep 6 step 3000/5070 loss 5.343 gnorm 0.16
+[epoch 6] train 5.3163 | val 5.2010 (ppl 181.4) | 518s
+  ep 7 step 3100/5070 loss 5.176 gnorm 0.15
+  ep 7 step 3200/5070 loss 5.218 gnorm 0.16
+  ep 7 step 3300/5070 loss 5.196 gnorm 0.16
+  ep 7 step 3400/5070 loss 5.157 gnorm 0.16
+  ep 7 step 3500/5070 loss 5.252 gnorm 0.17
+[epoch 7] train 5.2154 | val 5.1578 (ppl 173.8) | 507s
+  ep 8 step 3600/5070 loss 5.132 gnorm 0.17
+  ep 8 step 3700/5070 loss 5.170 gnorm 0.16
+  ep 8 step 3800/5070 loss 5.201 gnorm 0.16
+  ep 8 step 3900/5070 loss 5.039 gnorm 0.16
+  ep 8 step 4000/5070 loss 5.190 gnorm 0.17
+[epoch 8] train 5.1365 | val 5.1267 (ppl 168.5) | 526s
+  ep 9 step 4100/5070 loss 5.014 gnorm 0.16
+  ep 9 step 4200/5070 loss 5.108 gnorm 0.16
+  ep 9 step 4300/5070 loss 5.048 gnorm 0.17
+  ep 9 step 4400/5070 loss 5.097 gnorm 0.16
+  ep 9 step 4500/5070 loss 5.028 gnorm 0.17
+[epoch 9] train 5.0783 | val 5.1077 (ppl 165.3) | 523s
+  ep 10 step 4600/5070 loss 5.022 gnorm 0.16
+  ep 10 step 4700/5070 loss 5.086 gnorm 0.17
+  ep 10 step 4800/5070 loss 5.174 gnorm 0.16
+  ep 10 step 4900/5070 loss 4.953 gnorm 0.16
+  ep 10 step 5000/5070 loss 5.199 gnorm 0.17
+[epoch 10] train 5.0367 | val 5.0969 (ppl 163.5) | 539s
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:204: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[test] loss 5.0257 ppl 152.27
+
+>>> the history of the city
+' was constructed in the city .
+during the early 1970s of war , the university of the parliament , as an official of croatia . the " was still " on an early neolithic . there , the cathedral was created into a national museum of the city
+
+>>> in the second half of the season , the team
+was in the fourth quarter . the team in the world league was the first of a second run in the 2013 league cup in 2007 , and in the season of the first division to the end of the first quarter .
+= = early appearances = =
+
+>>> the album was released in
+the uk .
+= = = reception = = =
+= = = development = = =
+on november 13 , 2010 , nathan was a professional-selling deal to make a top , the game 's second . in the season , the match was
+
+>>> scientists have found that the
+last evidence of the name is a single form , is the first of the poem is the same name , the qedarites " in the city of the church on the church of the church in the same two of the king of the church , a very "
+
+>>> during the war , the army
+reached the u.s. fleet . the french fleet , the 1st division division in the british empire in which he was decommissioned and two of the ships was sent to the command for brigadier as the 9th marine division . the german artillery brigade was the primary fleet of the
+[done] results saved to runs/lstm_w2v_frozen/results.json

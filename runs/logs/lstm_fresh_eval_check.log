@@ -1,0 +1,4 @@
+runs/lstm_lr1e-3: logged 5.2297 | fresh (CPU) 5.2297 | OK
+runs/lstm_lr3e-3: logged 4.9300 | fresh (CPU) 4.9300 | OK
+runs/lstm_w2v_frozen: logged 4.6879 | fresh (CPU) 4.6879 | OK
+runs/lstm_glove_frozen: logged 4.7014 | fresh (CPU) 4.7014 | OK

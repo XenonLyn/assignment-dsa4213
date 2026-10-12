@@ -1,0 +1,181 @@
+{
+  "method": "GloVe (glove-wiki-gigaword-300): Wikipedia 2014 + Gigaword 5, 6B tokens, 400k uncased vocab",
+  "glove_vocab": 400000,
+  "load_time_s": 33.740272041992284,
+  "aliases": {
+    "@-@": "-",
+    "@,@": ",",
+    "@.@": "."
+  },
+  "aliased_tokens": [
+    "@-@",
+    "@.@",
+    "@,@"
+  ],
+  "coverage": {
+    "types_found": 27812,
+    "types_total": 28910,
+    "type_coverage": 0.962020062262193,
+    "token_coverage": {
+      "train": 0.9583822531154895,
+      "valid": 0.9332599943609109,
+      "test": 0.9252976214861001
+    },
+    "missing_types": 1100,
+    "top_missing_by_train_freq": [
+      [
+        "<unk>",
+        54625
+      ],
+      [
+        "<eos>",
+        23767
+      ],
+      [
+        "'t",
+        592
+      ],
+      [
+        "°",
+        258
+      ],
+      [
+        "−",
+        82
+      ],
+      [
+        "'brien",
+        76
+      ],
+      [
+        "×",
+        75
+      ],
+      [
+        "'malley",
+        54
+      ],
+      [
+        "magadheera",
+        53
+      ],
+      [
+        "sorraia",
+        48
+      ],
+      [
+        "degrom",
+        47
+      ],
+      [
+        "₹",
+        45
+      ],
+      [
+        "isesi",
+        44
+      ],
+      [
+        "toniná",
+        44
+      ],
+      [
+        "coldrum",
+        40
+      ],
+      [
+        "mkhedruli",
+        36
+      ],
+      [
+        "vandernoot",
+        36
+      ],
+      [
+        "﻿",
+        36
+      ],
+      [
+        "berhtwald",
+        35
+      ],
+      [
+        "qedar",
+        35
+      ],
+      [
+        "qedarites",
+        35
+      ],
+      [
+        "→",
+        34
+      ],
+      [
+        "'in",
+        33
+      ],
+      [
+        "kōsaku",
+        33
+      ],
+      [
+        "xook",
+        33
+      ],
+      [
+        "ganganelli",
+        32
+      ],
+      [
+        "hygrometricus",
+        32
+      ],
+      [
+        "mhalsa",
+        32
+      ],
+      [
+        "nuskhuri",
+        32
+      ],
+      [
+        "paranthodon",
+        32
+      ]
+    ]
+  },
+  "missing_init": "N(mu_d, sigma_d) per dimension from all GloVe vectors, seed 42; <pad> = 0; <unk>, <eos> are missing words",
+  "rescale": {
+    "raw_mean_row_norm": 6.4765801429748535,
+    "target_mean_row_norm": 2.8687198162078857,
+    "scale": 0.44293743810451974,
+    "ref_ckpt": "runs/lstm_lr3e-3/best.pt"
+  },
+  "shape": [
+    28913,
+    300
+  ],
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "args": {
+    "method": "glove",
+    "out": "emb/glove6b300.pt",
+    "data_dir": "data/wikitext-2",
+    "ref_ckpt": "runs/lstm_lr3e-3/best.pt",
+    "no_rescale": false,
+    "dim": 300,
+    "window": 5,
+    "negative": 5,
+    "sample": 0.001,
+    "epochs": 10,
+    "workers": 8,
+    "glove_name": "glove-wiki-gigaword-300",
+    "seed": 42
+  }
+}

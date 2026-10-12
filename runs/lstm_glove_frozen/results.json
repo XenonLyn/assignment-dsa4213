@@ -1,0 +1,102 @@
+{
+  "model": "lstm",
+  "args": {
+    "model": "lstm",
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/lstm_glove_frozen",
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "emb_dim": 300,
+    "hidden_dim": 512,
+    "n_layers": 2,
+    "n_heads": 6,
+    "ff_dim": 1200,
+    "dropout": 0.3,
+    "seq_len": 128,
+    "eval_seq_len": 128,
+    "batch_size": 32,
+    "epochs": 10,
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "warmup_steps": 200,
+    "clip": 1.0,
+    "log_interval": 100,
+    "seed": 42,
+    "device": "auto",
+    "embedding_path": "emb/glove6b300.pt",
+    "freeze_embeddings": true,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "eval_batch_size": 32
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "mps",
+  "size": {
+    "total": 27274589,
+    "trainable": 18600689,
+    "input_embedding": 8673900,
+    "output_layer": 14832369,
+    "body": 3768320,
+    "size_mb_fp32": 104.0443000793457
+  },
+  "train_time_s": 3563.6958110849373,
+  "total_wall_s": 3666.3828187500476,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 4.752647451882632,
+  "test_loss": 4.701421311484539,
+  "test_ppl": 110.10355273724427,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 9.78553287498653,
+    "score_tokens_per_s": 24945.090177353886,
+    "gen_tokens_per_s": 152.37034559559788
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "has been constructed in the city .\nmany of the buildings are closed for the construction of the cathedral , which are now the ruins of the city . it is home from the churchyard . this was an agreement of a parish between the church of the church"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "was not used for a game . the first series of the season was the first game in the season and won the top five times .\n= = = final = = =\n= = = = game standings = = = =\nflorida atlantic began"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "june 1984 , and was released in july 2003 , along with a single-edition album in new york city in february 2010 .\nalice was a longtime of his favorite performance that she received the \" song of the time \" .\n= = reception ="
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "kakapo had \" the same time to have been the same of the more expensive \" than the same species .\ncorythosaurus muscaria is a very common species of allosaurus ( now known as the english root ) , and the term name to a \" dwarf \" ,"
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "arrived the coast of the area . in the end of the war , the battalion commander had sent to the troopship , after the battle of normandy . the next battle after campbeltown was ordered by german forces . the next month of the song had been taken on"
+    }
+  ]
+}

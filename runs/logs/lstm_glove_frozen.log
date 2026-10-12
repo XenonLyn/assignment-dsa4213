@@ -1,0 +1,92 @@
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:131: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emb = torch.load(args.embedding_path)
+[checks] {'dropout_resampled': True, 'eval_matches_cpu': True}
+[params] {'total': 27274589, 'trainable': 18600689, 'input_embedding': 8673900, 'output_layer': 14832369, 'body': 3768320, 'size_mb_fp32': 104.0443000793457}
+  ep 1 step 100/5070 loss 7.169 gnorm 0.49
+  ep 1 step 200/5070 loss 7.347 gnorm 0.78
+  ep 1 step 300/5070 loss 7.349 gnorm 0.55
+  ep 1 step 400/5070 loss 7.257 gnorm 0.42
+  ep 1 step 500/5070 loss 7.047 gnorm 0.21
+[epoch 1] train 7.3992 | val 6.6716 (ppl 789.7) | 324s
+  ep 2 step 600/5070 loss 6.571 gnorm 0.15
+  ep 2 step 700/5070 loss 6.130 gnorm 0.17
+  ep 2 step 800/5070 loss 6.099 gnorm 0.18
+  ep 2 step 900/5070 loss 5.771 gnorm 0.18
+  ep 2 step 1000/5070 loss 5.683 gnorm 0.20
+[epoch 2] train 6.1820 | val 5.4545 (ppl 233.8) | 342s
+  ep 3 step 1100/5070 loss 5.599 gnorm 0.18
+  ep 3 step 1200/5070 loss 5.407 gnorm 0.19
+  ep 3 step 1300/5070 loss 5.613 gnorm 0.19
+  ep 3 step 1400/5070 loss 5.482 gnorm 0.20
+  ep 3 step 1500/5070 loss 5.429 gnorm 0.18
+[epoch 3] train 5.4725 | val 5.1104 (ppl 165.7) | 357s
+  ep 4 step 1600/5070 loss 5.260 gnorm 0.19
+  ep 4 step 1700/5070 loss 5.052 gnorm 0.19
+  ep 4 step 1800/5070 loss 4.994 gnorm 0.19
+  ep 4 step 1900/5070 loss 5.132 gnorm 0.18
+  ep 4 step 2000/5070 loss 5.116 gnorm 0.18
+[epoch 4] train 5.1252 | val 4.9505 (ppl 141.2) | 376s
+  ep 5 step 2100/5070 loss 4.936 gnorm 0.20
+  ep 5 step 2200/5070 loss 4.988 gnorm 0.19
+  ep 5 step 2300/5070 loss 4.953 gnorm 0.20
+  ep 5 step 2400/5070 loss 4.895 gnorm 0.19
+  ep 5 step 2500/5070 loss 4.769 gnorm 0.20
+[epoch 5] train 4.8925 | val 4.8645 (ppl 129.6) | 370s
+  ep 6 step 2600/5070 loss 4.680 gnorm 0.20
+  ep 6 step 2700/5070 loss 4.725 gnorm 0.20
+  ep 6 step 2800/5070 loss 4.688 gnorm 0.20
+  ep 6 step 2900/5070 loss 4.784 gnorm 0.20
+  ep 6 step 3000/5070 loss 4.781 gnorm 0.19
+[epoch 6] train 4.7125 | val 4.8123 (ppl 123.0) | 367s
+  ep 7 step 3100/5070 loss 4.495 gnorm 0.20
+  ep 7 step 3200/5070 loss 4.554 gnorm 0.21
+  ep 7 step 3300/5070 loss 4.529 gnorm 0.21
+  ep 7 step 3400/5070 loss 4.562 gnorm 0.20
+  ep 7 step 3500/5070 loss 4.631 gnorm 0.21
+[epoch 7] train 4.5745 | val 4.7849 (ppl 119.7) | 359s
+  ep 8 step 3600/5070 loss 4.488 gnorm 0.21
+  ep 8 step 3700/5070 loss 4.420 gnorm 0.21
+  ep 8 step 3800/5070 loss 4.554 gnorm 0.21
+  ep 8 step 3900/5070 loss 4.367 gnorm 0.20
+  ep 8 step 4000/5070 loss 4.549 gnorm 0.21
+[epoch 8] train 4.4685 | val 4.7670 (ppl 117.6) | 363s
+  ep 9 step 4100/5070 loss 4.321 gnorm 0.21
+  ep 9 step 4200/5070 loss 4.380 gnorm 0.22
+  ep 9 step 4300/5070 loss 4.404 gnorm 0.22
+  ep 9 step 4400/5070 loss 4.418 gnorm 0.21
+  ep 9 step 4500/5070 loss 4.350 gnorm 0.22
+[epoch 9] train 4.3936 | val 4.7568 (ppl 116.4) | 355s
+  ep 10 step 4600/5070 loss 4.321 gnorm 0.21
+  ep 10 step 4700/5070 loss 4.420 gnorm 0.22
+  ep 10 step 4800/5070 loss 4.521 gnorm 0.22
+  ep 10 step 4900/5070 loss 4.284 gnorm 0.21
+  ep 10 step 5000/5070 loss 4.497 gnorm 0.22
+[epoch 10] train 4.3454 | val 4.7526 (ppl 115.9) | 352s
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:207: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[test] loss 4.7014 ppl 110.10
+
+>>> the history of the city
+has been constructed in the city .
+many of the buildings are closed for the construction of the cathedral , which are now the ruins of the city . it is home from the churchyard . this was an agreement of a parish between the church of the church
+
+>>> in the second half of the season , the team
+was not used for a game . the first series of the season was the first game in the season and won the top five times .
+= = = final = = =
+= = = = game standings = = = =
+florida atlantic began
+
+>>> the album was released in
+june 1984 , and was released in july 2003 , along with a single-edition album in new york city in february 2010 .
+alice was a longtime of his favorite performance that she received the " song of the time " .
+= = reception =
+
+>>> scientists have found that the
+kakapo had " the same time to have been the same of the more expensive " than the same species .
+corythosaurus muscaria is a very common species of allosaurus ( now known as the english root ) , and the term name to a " dwarf " ,
+
+>>> during the war , the army
+arrived the coast of the area . in the end of the war , the battalion commander had sent to the troopship , after the battle of normandy . the next battle after campbeltown was ordered by german forces . the next month of the song had been taken on
+[done] results saved to runs/lstm_glove_frozen/results.json

@@ -1,0 +1,102 @@
+{
+  "model": "lstm",
+  "args": {
+    "model": "lstm",
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/lstm_lr3e-3",
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "emb_dim": 300,
+    "hidden_dim": 512,
+    "n_layers": 2,
+    "n_heads": 6,
+    "ff_dim": 1200,
+    "dropout": 0.3,
+    "seq_len": 128,
+    "eval_seq_len": 128,
+    "batch_size": 32,
+    "epochs": 10,
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "warmup_steps": 200,
+    "clip": 1.0,
+    "log_interval": 100,
+    "seed": 42,
+    "device": "auto",
+    "embedding_path": null,
+    "freeze_embeddings": false,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "eval_batch_size": 32
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "mps",
+  "size": {
+    "total": 27274589,
+    "trainable": 27274589,
+    "input_embedding": 8673900,
+    "output_layer": 14832369,
+    "body": 3768320,
+    "size_mb_fp32": 104.0443000793457
+  },
+  "train_time_s": 3168.3181362069445,
+  "total_wall_s": 3262.9159945420106,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 5.2242875796322785,
+  "test_loss": 5.149052511818878,
+  "test_ppl": 172.26819089207993,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 10.194186707958579,
+    "score_tokens_per_s": 23945.11764331635,
+    "gen_tokens_per_s": 158.74890218975784
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "; the fort was not to a large extent of the main community in the town of the south wall , is at the new zealanders . the first was completed in march 1914 , though the u.s. state was opened in april 1915 . the following year , the"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "was to be able to be to be the second season .\n= = = hurricane = = =\n= = = career = = =\nthe first single , the team had been used to be the sixth year , with the lead race to be"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "which three years and was later , but he was appointed to have two or most important players as a result of a game .\ndespite the first minute , after having been considered a result , the game 's only to be made to be the album to"
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "album is a \" one \" . the video in the two of the film is based in the united states , stating that \" the game was a \" real part of the game \" . \"\nthe song \" is a \" time , \" a \""
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "continued , but as the most important population of the highway to the north war , he became a tropical storm near the battle . the german fleet were used to take place throughout the state area with the north side of the western pacific , but it was also"
+    }
+  ]
+}

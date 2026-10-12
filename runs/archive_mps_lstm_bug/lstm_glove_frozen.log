@@ -1,0 +1,87 @@
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:131: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emb = torch.load(args.embedding_path)
+[params] {'total': 27274589, 'trainable': 18600689, 'input_embedding': 8673900, 'output_layer': 14832369, 'body': 3768320, 'size_mb_fp32': 104.0443000793457}
+  ep 1 step 100/5070 loss 7.184 gnorm 0.50
+  ep 1 step 200/5070 loss 7.412 gnorm 0.73
+  ep 1 step 300/5070 loss 7.450 gnorm 0.63
+  ep 1 step 400/5070 loss 7.401 gnorm 0.54
+  ep 1 step 500/5070 loss 6.930 gnorm 0.22
+[epoch 1] train 7.4378 | val 6.5308 (ppl 685.9) | 559s
+  ep 2 step 600/5070 loss 6.616 gnorm 0.16
+  ep 2 step 700/5070 loss 6.278 gnorm 0.16
+  ep 2 step 800/5070 loss 6.343 gnorm 0.17
+  ep 2 step 900/5070 loss 6.093 gnorm 0.18
+  ep 2 step 1000/5070 loss 6.064 gnorm 0.15
+[epoch 2] train 6.3707 | val 5.8156 (ppl 335.5) | 579s
+  ep 3 step 1100/5070 loss 6.061 gnorm 0.16
+  ep 3 step 1200/5070 loss 5.902 gnorm 0.17
+  ep 3 step 1300/5070 loss 6.081 gnorm 0.16
+  ep 3 step 1400/5070 loss 5.979 gnorm 0.15
+  ep 3 step 1500/5070 loss 5.954 gnorm 0.16
+[epoch 3] train 5.9413 | val 5.5873 (ppl 267.0) | 524s
+  ep 4 step 1600/5070 loss 5.813 gnorm 0.16
+  ep 4 step 1700/5070 loss 5.652 gnorm 0.15
+  ep 4 step 1800/5070 loss 5.634 gnorm 0.17
+  ep 4 step 1900/5070 loss 5.724 gnorm 0.15
+  ep 4 step 2000/5070 loss 5.648 gnorm 0.15
+[epoch 4] train 5.7019 | val 5.4434 (ppl 231.2) | 494s
+  ep 5 step 2100/5070 loss 5.623 gnorm 0.15
+  ep 5 step 2200/5070 loss 5.577 gnorm 0.17
+  ep 5 step 2300/5070 loss 5.573 gnorm 0.15
+  ep 5 step 2400/5070 loss 5.488 gnorm 0.16
+  ep 5 step 2500/5070 loss 5.372 gnorm 0.17
+[epoch 5] train 5.5398 | val 5.3564 (ppl 212.0) | 492s
+  ep 6 step 2600/5070 loss 5.358 gnorm 0.16
+  ep 6 step 2700/5070 loss 5.480 gnorm 0.15
+  ep 6 step 2800/5070 loss 5.409 gnorm 0.16
+  ep 6 step 2900/5070 loss 5.474 gnorm 0.16
+  ep 6 step 3000/5070 loss 5.451 gnorm 0.15
+[epoch 6] train 5.4241 | val 5.2973 (ppl 199.8) | 516s
+  ep 7 step 3100/5070 loss 5.293 gnorm 0.15
+  ep 7 step 3200/5070 loss 5.356 gnorm 0.16
+  ep 7 step 3300/5070 loss 5.316 gnorm 0.16
+  ep 7 step 3400/5070 loss 5.286 gnorm 0.15
+  ep 7 step 3500/5070 loss 5.368 gnorm 0.16
+[epoch 7] train 5.3325 | val 5.2591 (ppl 192.3) | 518s
+  ep 8 step 3600/5070 loss 5.313 gnorm 0.16
+  ep 8 step 3700/5070 loss 5.247 gnorm 0.16
+  ep 8 step 3800/5070 loss 5.339 gnorm 0.16
+  ep 8 step 3900/5070 loss 5.178 gnorm 0.15
+  ep 8 step 4000/5070 loss 5.303 gnorm 0.17
+[epoch 8] train 5.2629 | val 5.2291 (ppl 186.6) | 495s
+  ep 9 step 4100/5070 loss 5.146 gnorm 0.15
+  ep 9 step 4200/5070 loss 5.275 gnorm 0.16
+  ep 9 step 4300/5070 loss 5.196 gnorm 0.16
+  ep 9 step 4400/5070 loss 5.244 gnorm 0.16
+  ep 9 step 4500/5070 loss 5.141 gnorm 0.16
+[epoch 9] train 5.2101 | val 5.2141 (ppl 183.8) | 510s
+  ep 10 step 4600/5070 loss 5.167 gnorm 0.16
+  ep 10 step 4700/5070 loss 5.204 gnorm 0.16
+  ep 10 step 4800/5070 loss 5.345 gnorm 0.16
+  ep 10 step 4900/5070 loss 5.092 gnorm 0.16
+  ep 10 step 5000/5070 loss 5.346 gnorm 0.16
+[epoch 10] train 5.1768 | val 5.2034 (ppl 181.9) | 513s
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:204: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[test] loss 5.1271 ppl 168.54
+
+>>> the history of the city
+which was placed in the city .
+after the war of a review of the university , the court of the university was the sixth to the " . for the same day , we was born , " it was still too more " . the first time
+
+>>> in the second half of the season , the team
+was a team by his first three months , but it was an first for the league in the second round and a total of 16 of the season , and his first first match for the season . the first quarter in the second , federer scored to a
+
+>>> the album was released in
+a playstation and the episode in the third episode , while the album was " on the music 's song that had been a " of heaven " , written in her fantasy song " a rock , the " and " the song " . the first single of
+
+>>> scientists have found that the
+species are a "-like " . a-star , the most common cell are the species and the first brood were only in the same .
+= = = = = = = = = = =
+a common of the first species of the
+
+>>> during the war , the army
+moved the port and the french forces and the german navy , and the brigade was attacked by the royal of raaf , but the battle was made to the army-hungarian battleships . the germans began the british fleet of the 1st battalion , but he was later
+[done] results saved to runs/lstm_glove_frozen/results.json

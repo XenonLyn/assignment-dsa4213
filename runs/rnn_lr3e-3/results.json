@@ -1,0 +1,102 @@
+{
+  "model": "rnn",
+  "args": {
+    "model": "rnn",
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/rnn_lr3e-3",
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "emb_dim": 300,
+    "hidden_dim": 512,
+    "n_layers": 2,
+    "n_heads": 6,
+    "ff_dim": 1200,
+    "dropout": 0.3,
+    "seq_len": 128,
+    "eval_seq_len": 128,
+    "batch_size": 32,
+    "epochs": 10,
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "warmup_steps": 200,
+    "clip": 1.0,
+    "log_interval": 100,
+    "seed": 42,
+    "device": "auto",
+    "embedding_path": null,
+    "freeze_embeddings": false,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "eval_batch_size": 32
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "mps",
+  "size": {
+    "total": 24448349,
+    "trainable": 24448349,
+    "input_embedding": 8673900,
+    "output_layer": 14832369,
+    "body": 942080,
+    "size_mb_fp32": 93.2630500793457
+  },
+  "train_time_s": 3754.0680043749744,
+  "total_wall_s": 3876.3856307919486,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 5.479207062991689,
+  "test_loss": 5.417160890881234,
+  "test_ppl": 225.23873651859608,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 12.457757125026546,
+    "score_tokens_per_s": 19594.297556951275,
+    "gen_tokens_per_s": 183.33990852238838
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "; the ship was an new storm . during the war , he stated that it is a \" good , with a very \" member of the \" of his own career \" , though the poem in the book of a variety of the city in the second"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "was a major form of the city of the same year .\n= = = first-10 = = =\n= = = the game = = =\nthe first known as the film was not , while a \" two , who gave a way"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "the 1970s , and that it was no longer . she was found to the end of the main part of a small-known and hip-year contract . he scored a similar area for the first time of the first season .\n= = = ="
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "album is a \" \" \" \" \" \" . \"\nthe most important system would be found to the \" ode to \" the \" \" a \" [-] \" of the episode \" .\nin the late 1960s , the first had been been"
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "has the last three-gun in the season . it was also a tropical cyclone from the west and the nation , but the same number of the city and his labyrinth came to the site 's first time of the top for the \" day of the film"
+    }
+  ]
+}

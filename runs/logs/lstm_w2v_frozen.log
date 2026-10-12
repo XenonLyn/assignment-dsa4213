@@ -1,0 +1,93 @@
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:131: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  emb = torch.load(args.embedding_path)
+[checks] {'dropout_resampled': True, 'eval_matches_cpu': True}
+[params] {'total': 27274589, 'trainable': 18600689, 'input_embedding': 8673900, 'output_layer': 14832369, 'body': 3768320, 'size_mb_fp32': 104.0443000793457}
+  ep 1 step 100/5070 loss 7.158 gnorm 0.52
+  ep 1 step 200/5070 loss 7.322 gnorm 0.77
+  ep 1 step 300/5070 loss 7.364 gnorm 0.54
+  ep 1 step 400/5070 loss 6.951 gnorm 0.28
+  ep 1 step 500/5070 loss 6.545 gnorm 0.16
+[epoch 1] train 7.2707 | val 6.1146 (ppl 452.4) | 322s
+  ep 2 step 600/5070 loss 6.181 gnorm 0.17
+  ep 2 step 700/5070 loss 5.825 gnorm 0.17
+  ep 2 step 800/5070 loss 5.817 gnorm 0.19
+  ep 2 step 900/5070 loss 5.545 gnorm 0.19
+  ep 2 step 1000/5070 loss 5.482 gnorm 0.18
+[epoch 2] train 5.8814 | val 5.2747 (ppl 195.3) | 334s
+  ep 3 step 1100/5070 loss 5.400 gnorm 0.19
+  ep 3 step 1200/5070 loss 5.213 gnorm 0.20
+  ep 3 step 1300/5070 loss 5.442 gnorm 0.20
+  ep 3 step 1400/5070 loss 5.302 gnorm 0.18
+  ep 3 step 1500/5070 loss 5.295 gnorm 0.19
+[epoch 3] train 5.2963 | val 5.0192 (ppl 151.3) | 325s
+  ep 4 step 1600/5070 loss 5.118 gnorm 0.19
+  ep 4 step 1700/5070 loss 4.895 gnorm 0.19
+  ep 4 step 1800/5070 loss 4.872 gnorm 0.20
+  ep 4 step 1900/5070 loss 5.004 gnorm 0.19
+  ep 4 step 2000/5070 loss 4.993 gnorm 0.18
+[epoch 4] train 4.9899 | val 4.8922 (ppl 133.2) | 331s
+  ep 5 step 2100/5070 loss 4.793 gnorm 0.20
+  ep 5 step 2200/5070 loss 4.862 gnorm 0.20
+  ep 5 step 2300/5070 loss 4.846 gnorm 0.20
+  ep 5 step 2400/5070 loss 4.785 gnorm 0.20
+  ep 5 step 2500/5070 loss 4.667 gnorm 0.19
+[epoch 5] train 4.7794 | val 4.8190 (ppl 123.8) | 318s
+  ep 6 step 2600/5070 loss 4.580 gnorm 0.20
+  ep 6 step 2700/5070 loss 4.623 gnorm 0.20
+  ep 6 step 2800/5070 loss 4.587 gnorm 0.20
+  ep 6 step 2900/5070 loss 4.698 gnorm 0.20
+  ep 6 step 3000/5070 loss 4.689 gnorm 0.20
+[epoch 6] train 4.6146 | val 4.7818 (ppl 119.3) | 309s
+  ep 7 step 3100/5070 loss 4.419 gnorm 0.21
+  ep 7 step 3200/5070 loss 4.471 gnorm 0.21
+  ep 7 step 3300/5070 loss 4.406 gnorm 0.21
+  ep 7 step 3400/5070 loss 4.442 gnorm 0.21
+  ep 7 step 3500/5070 loss 4.534 gnorm 0.20
+[epoch 7] train 4.4845 | val 4.7621 (ppl 117.0) | 329s
+  ep 8 step 3600/5070 loss 4.401 gnorm 0.21
+  ep 8 step 3700/5070 loss 4.365 gnorm 0.21
+  ep 8 step 3800/5070 loss 4.473 gnorm 0.21
+  ep 8 step 3900/5070 loss 4.293 gnorm 0.21
+  ep 8 step 4000/5070 loss 4.455 gnorm 0.22
+[epoch 8] train 4.3845 | val 4.7471 (ppl 115.2) | 325s
+  ep 9 step 4100/5070 loss 4.252 gnorm 0.21
+  ep 9 step 4200/5070 loss 4.312 gnorm 0.22
+  ep 9 step 4300/5070 loss 4.313 gnorm 0.22
+  ep 9 step 4400/5070 loss 4.348 gnorm 0.21
+  ep 9 step 4500/5070 loss 4.249 gnorm 0.22
+[epoch 9] train 4.3128 | val 4.7405 (ppl 114.5) | 332s
+  ep 10 step 4600/5070 loss 4.255 gnorm 0.21
+  ep 10 step 4700/5070 loss 4.334 gnorm 0.22
+  ep 10 step 4800/5070 loss 4.429 gnorm 0.22
+  ep 10 step 4900/5070 loss 4.231 gnorm 0.21
+  ep 10 step 5000/5070 loss 4.417 gnorm 0.22
+[epoch 10] train 4.2664 | val 4.7399 (ppl 114.4) | 330s
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:207: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[test] loss 4.6879 ppl 108.62
+
+>>> the history of the city
+had been laid to the city .
+several years later , they wanted to leave a new school at the site of the new orleans area .
+a total of seven employees of bath , buildings , and houses , are connected with the national register of historic
+
+>>> in the second half of the season , the team
+'s first team came from the season to the football league .
+= = = hurricane = = =
+as a result of a game , the game was created in the 2010 fifa cup with the australian team against the new york yankees on 27 october 2003
+
+>>> the album was released in
+november 1988 .
+= = = background = = =
+" crazy " is a song about the original track of the song , describing the song 's " viva brew " and " beat the " . the song , with a song-in-out
+
+>>> scientists have found that the
+presence of the species is not used to refer the word .
+the noisy miner miner was also described as the dubious in the american red cross , which can be found in the field of the northern hemisphere .
+= = = kakapo , common starling =
+
+>>> during the war , the army
+wanted to establish in the area of eastern china , where the french army would not withdraw to the east . despite the arrival of the battle , the german fleet conducted extensive deployments to the caribbean sea , and was able to seize the south koreans to allow the
+[done] results saved to runs/lstm_w2v_frozen/results.json

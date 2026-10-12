@@ -20,7 +20,7 @@ import torch.nn.functional as F
 from common import (IGNORE_INDEX, PAD, UNK, Timer, detokenize, get_device,
                     hardware_info, load_corpus, load_prompts, make_chunks,
                     sample_next, save_json, set_seed, sync, tokenize_line)
-from models import build_model, check_causality, count_params
+from models import build_model, check_causality, check_dropout_and_eval, count_params
 
 
 def get_args():
@@ -134,6 +134,9 @@ def main():
     if args.freeze_embeddings:
         model.embedding.weight.requires_grad_(False)
     assert check_causality(model, V, device), "model can see future tokens!"
+    checks = check_dropout_and_eval(model, V, device)
+    print("[checks]", checks)
+    assert all(checks.values()), f"dropout / eval-mode check failed on {device}: {checks}"
     params = count_params(model)
     print("[params]", params)
 

@@ -1,0 +1,1 @@
+[select] LSTM lr = 3e-3 (by validation loss)

@@ -1,0 +1,8 @@
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+[fit] 4.7s, entries={'raw_entries': 3804292, 'continuation_entries': 1993036, 'total': 5797328}
+[valid] order=1 loss=6.7073 ppl=818.36
+[valid] order=2 loss=5.6160 ppl=274.78
+[valid] order=3 loss=5.4630 ppl=235.81
+[valid] order=4 loss=5.4361 ppl=229.54
+[test] order=4 loss=5.3786 ppl=216.73
+[done] results saved to runs/ngram/results.json

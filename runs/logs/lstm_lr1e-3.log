@@ -1,0 +1,94 @@
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+[checks] {'dropout_resampled': True, 'eval_matches_cpu': True}
+[params] {'total': 27274589, 'trainable': 27274589, 'input_embedding': 8673900, 'output_layer': 14832369, 'body': 3768320, 'size_mb_fp32': 104.0443000793457}
+  ep 1 step 100/5070 loss 7.088 gnorm 0.48
+  ep 1 step 200/5070 loss 7.065 gnorm 0.63
+  ep 1 step 300/5070 loss 7.073 gnorm 0.44
+  ep 1 step 400/5070 loss 7.000 gnorm 0.40
+  ep 1 step 500/5070 loss 6.897 gnorm 0.42
+[epoch 1] train 7.2918 | val 6.5124 (ppl 673.4) | 267s
+  ep 2 step 600/5070 loss 6.729 gnorm 0.44
+  ep 2 step 700/5070 loss 6.510 gnorm 0.38
+  ep 2 step 800/5070 loss 6.530 gnorm 0.46
+  ep 2 step 900/5070 loss 6.293 gnorm 0.38
+  ep 2 step 1000/5070 loss 6.268 gnorm 0.30
+[epoch 2] train 6.5187 | val 6.0261 (ppl 414.1) | 290s
+  ep 3 step 1100/5070 loss 6.174 gnorm 0.32
+  ep 3 step 1200/5070 loss 6.135 gnorm 0.27
+  ep 3 step 1300/5070 loss 6.194 gnorm 0.25
+  ep 3 step 1400/5070 loss 6.082 gnorm 0.22
+  ep 3 step 1500/5070 loss 6.048 gnorm 0.22
+[epoch 3] train 6.1071 | val 5.7686 (ppl 320.1) | 304s
+  ep 4 step 1600/5070 loss 5.917 gnorm 0.26
+  ep 4 step 1700/5070 loss 5.790 gnorm 0.22
+  ep 4 step 1800/5070 loss 5.823 gnorm 0.21
+  ep 4 step 1900/5070 loss 5.835 gnorm 0.23
+  ep 4 step 2000/5070 loss 5.771 gnorm 0.19
+[epoch 4] train 5.8489 | val 5.6033 (ppl 271.3) | 331s
+  ep 5 step 2100/5070 loss 5.787 gnorm 0.19
+  ep 5 step 2200/5070 loss 5.688 gnorm 0.21
+  ep 5 step 2300/5070 loss 5.704 gnorm 0.21
+  ep 5 step 2400/5070 loss 5.620 gnorm 0.20
+  ep 5 step 2500/5070 loss 5.497 gnorm 0.22
+[epoch 5] train 5.6721 | val 5.4989 (ppl 244.4) | 338s
+  ep 6 step 2600/5070 loss 5.467 gnorm 0.19
+  ep 6 step 2700/5070 loss 5.582 gnorm 0.20
+  ep 6 step 2800/5070 loss 5.513 gnorm 0.19
+  ep 6 step 2900/5070 loss 5.588 gnorm 0.22
+  ep 6 step 3000/5070 loss 5.566 gnorm 0.22
+[epoch 6] train 5.5375 | val 5.4159 (ppl 224.9) | 336s
+  ep 7 step 3100/5070 loss 5.406 gnorm 0.22
+  ep 7 step 3200/5070 loss 5.443 gnorm 0.20
+  ep 7 step 3300/5070 loss 5.401 gnorm 0.21
+  ep 7 step 3400/5070 loss 5.395 gnorm 0.25
+  ep 7 step 3500/5070 loss 5.435 gnorm 0.21
+[epoch 7] train 5.4337 | val 5.3647 (ppl 213.7) | 336s
+  ep 8 step 3600/5070 loss 5.420 gnorm 0.21
+  ep 8 step 3700/5070 loss 5.369 gnorm 0.23
+  ep 8 step 3800/5070 loss 5.385 gnorm 0.25
+  ep 8 step 3900/5070 loss 5.289 gnorm 0.21
+  ep 8 step 4000/5070 loss 5.408 gnorm 0.26
+[epoch 8] train 5.3572 | val 5.3345 (ppl 207.4) | 362s
+  ep 9 step 4100/5070 loss 5.255 gnorm 0.22
+  ep 9 step 4200/5070 loss 5.385 gnorm 0.23
+  ep 9 step 4300/5070 loss 5.297 gnorm 0.25
+  ep 9 step 4400/5070 loss 5.319 gnorm 0.21
+  ep 9 step 4500/5070 loss 5.264 gnorm 0.24
+[epoch 9] train 5.3038 | val 5.3151 (ppl 203.4) | 333s
+  ep 10 step 4600/5070 loss 5.255 gnorm 0.22
+  ep 10 step 4700/5070 loss 5.311 gnorm 0.23
+  ep 10 step 4800/5070 loss 5.395 gnorm 0.22
+  ep 10 step 4900/5070 loss 5.170 gnorm 0.21
+  ep 10 step 5000/5070 loss 5.379 gnorm 0.23
+[epoch 10] train 5.2696 | val 5.3024 (ppl 200.8) | 329s
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:207: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[test] loss 5.2297 ppl 186.74
+
+>>> the history of the city
+: the royal government of the north of york , the system also formed a tropical cyclone .
+= = = early storm = =
+the first time with the ship became the longest of their first four months . he served as the second day , and
+
+>>> in the second half of the season , the team
+was a long three times .
+= = = =
+the new york , with the following year , he made that it were to be a " a best to the same day of the song .
+at the first season , she scored a single
+
+>>> the album was released in
+the uk .
+= = = track = = =
+= = = =
+= = = background = =
+the game debuted in the uk , 2013 – 2009 in 2008 .
+the game 's song , " a first album , was an
+
+>>> scientists have found that the
+episode is a " one of the year " , on the time , at the age , as well as the whole series of the new york , in which he had had a major role-up .
+the episode was a number of the film of
+
+>>> during the war , the army
+began the hurricane to the end of the new york war , a large route of south carolina . the new zealanders was completed . the german route was also used with four deaths and , before only the city 's south atlantic division of the western pacific state of
+[done] results saved to runs/lstm_lr1e-3/results.json

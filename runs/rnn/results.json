@@ -1,0 +1,102 @@
+{
+  "model": "rnn",
+  "args": {
+    "model": "rnn",
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/rnn",
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "emb_dim": 300,
+    "hidden_dim": 512,
+    "n_layers": 2,
+    "n_heads": 6,
+    "ff_dim": 1200,
+    "dropout": 0.3,
+    "seq_len": 128,
+    "eval_seq_len": 128,
+    "batch_size": 32,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "warmup_steps": 200,
+    "clip": 1.0,
+    "log_interval": 100,
+    "seed": 42,
+    "device": "auto",
+    "embedding_path": null,
+    "freeze_embeddings": false,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "eval_batch_size": 32
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "mps",
+  "size": {
+    "total": 24448349,
+    "trainable": 24448349,
+    "input_embedding": 8673900,
+    "output_layer": 14832369,
+    "body": 942080,
+    "size_mb_fp32": 93.2630500793457
+  },
+  "train_time_s": 3366.410499958147,
+  "total_wall_s": 3480.680272583035,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 5.427364940015068,
+  "test_loss": 5.366813667325461,
+  "test_ppl": 214.17933269170774,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 12.64476062497124,
+    "score_tokens_per_s": 19304.517281089706,
+    "gen_tokens_per_s": 150.97989347849474
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "had been damaged .\nthe game was replaced with the team for a tropical cyclone on the season in the british union .\nshe was also the first single and game after the rest of his first three months . he finished his first time in the city"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "was a large version of the city of the same year .\n= = in the early 19th century = = =\n= = = and other = = =\nthe national party of the second part of his home , a first match are not found"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "the 19th century , with a new cyclone in the country , with the new zealand was released by the northern terminus of the south of mexico .\nit was held about a local force as the first two years .\n= = = =\n= ="
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "album is a \"-\" \" \" with the song .\nthe music-tailed of the church of the cathedral is \" , and a \"-man \" .\nin the end of the game , the episode was a large , as \" the"
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "became the third-season . the national war , his first three-based in a tropical cyclone was the longest of a new york in the united states . it won place on the eastern 1990s , and a number of the area , who had been known"
+    }
+  ]
+}

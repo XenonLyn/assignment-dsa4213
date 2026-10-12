@@ -1,0 +1,85 @@
+/Users/l1nx/Desktop/Courses/Graduate/Classes/2609/DSA4213/language_modeling/train_neural.py:204: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(out / "best.pt", map_location=device))
+[device] mps
+[data] {'train': {'tokens': 2075677, 'unk_rate': 0.02631671540439129}, 'valid': {'tokens': 216347, 'unk_rate': 0.05416298657655716}, 'test': {'tokens': 244102, 'unk_rate': 0.06234279274940491}, 'vocab_size': 28913}
+[params] {'total': 19583513, 'trainable': 19583513, 'input_embedding': 8673900, 'output_layer': 8702813, 'body': 2206800, 'size_mb_fp32': 74.70517349243164}
+  ep 1 step 100/5070 loss 6.947 gnorm 0.51
+  ep 1 step 200/5070 loss 6.492 gnorm 0.58
+  ep 1 step 300/5070 loss 6.310 gnorm 0.51
+  ep 1 step 400/5070 loss 6.143 gnorm 0.53
+  ep 1 step 500/5070 loss 6.058 gnorm 0.52
+[epoch 1] train 6.8154 | val 5.7446 (ppl 312.5) | 306s
+  ep 2 step 600/5070 loss 5.876 gnorm 0.55
+  ep 2 step 700/5070 loss 5.675 gnorm 0.57
+  ep 2 step 800/5070 loss 5.755 gnorm 0.55
+  ep 2 step 900/5070 loss 5.584 gnorm 0.58
+  ep 2 step 1000/5070 loss 5.591 gnorm 0.57
+[epoch 2] train 5.7678 | val 5.4304 (ppl 228.2) | 310s
+  ep 3 step 1100/5070 loss 5.470 gnorm 0.59
+  ep 3 step 1200/5070 loss 5.373 gnorm 0.57
+  ep 3 step 1300/5070 loss 5.569 gnorm 0.60
+  ep 3 step 1400/5070 loss 5.479 gnorm 0.59
+  ep 3 step 1500/5070 loss 5.499 gnorm 0.59
+[epoch 3] train 5.4485 | val 5.2781 (ppl 196.0) | 311s
+  ep 4 step 1600/5070 loss 5.341 gnorm 0.63
+  ep 4 step 1700/5070 loss 5.158 gnorm 0.64
+  ep 4 step 1800/5070 loss 5.117 gnorm 0.62
+  ep 4 step 1900/5070 loss 5.239 gnorm 0.62
+  ep 4 step 2000/5070 loss 5.272 gnorm 0.65
+[epoch 4] train 5.2324 | val 5.1828 (ppl 178.2) | 333s
+  ep 5 step 2100/5070 loss 5.114 gnorm 0.63
+  ep 5 step 2200/5070 loss 5.099 gnorm 0.66
+  ep 5 step 2300/5070 loss 5.123 gnorm 0.67
+  ep 5 step 2400/5070 loss 5.077 gnorm 0.68
+  ep 5 step 2500/5070 loss 4.941 gnorm 0.66
+[epoch 5] train 5.0632 | val 5.1173 (ppl 166.9) | 315s
+  ep 6 step 2600/5070 loss 4.878 gnorm 0.66
+  ep 6 step 2700/5070 loss 4.923 gnorm 0.67
+  ep 6 step 2800/5070 loss 4.883 gnorm 0.67
+  ep 6 step 2900/5070 loss 5.004 gnorm 0.70
+  ep 6 step 3000/5070 loss 4.985 gnorm 0.69
+[epoch 6] train 4.9291 | val 5.0684 (ppl 158.9) | 314s
+  ep 7 step 3100/5070 loss 4.768 gnorm 0.69
+  ep 7 step 3200/5070 loss 4.813 gnorm 0.70
+  ep 7 step 3300/5070 loss 4.776 gnorm 0.74
+  ep 7 step 3400/5070 loss 4.783 gnorm 0.71
+  ep 7 step 3500/5070 loss 4.873 gnorm 0.69
+[epoch 7] train 4.8245 | val 5.0487 (ppl 155.8) | 327s
+  ep 8 step 3600/5070 loss 4.790 gnorm 0.71
+  ep 8 step 3700/5070 loss 4.721 gnorm 0.71
+  ep 8 step 3800/5070 loss 4.790 gnorm 0.72
+  ep 8 step 3900/5070 loss 4.663 gnorm 0.72
+  ep 8 step 4000/5070 loss 4.821 gnorm 0.73
+[epoch 8] train 4.7456 | val 5.0308 (ppl 153.1) | 331s
+  ep 9 step 4100/5070 loss 4.616 gnorm 0.71
+  ep 9 step 4200/5070 loss 4.713 gnorm 0.73
+  ep 9 step 4300/5070 loss 4.700 gnorm 0.73
+  ep 9 step 4400/5070 loss 4.696 gnorm 0.72
+  ep 9 step 4500/5070 loss 4.642 gnorm 0.75
+[epoch 9] train 4.6920 | val 5.0183 (ppl 151.2) | 308s
+  ep 10 step 4600/5070 loss 4.662 gnorm 0.75
+  ep 10 step 4700/5070 loss 4.749 gnorm 0.75
+  ep 10 step 4800/5070 loss 4.769 gnorm 0.74
+  ep 10 step 4900/5070 loss 4.599 gnorm 0.74
+  ep 10 step 5000/5070 loss 4.768 gnorm 0.74
+[epoch 10] train 4.6582 | val 5.0175 (ppl 151.0) | 316s
+[test] loss 4.9454 ppl 140.53
+
+>>> the history of the city
+for the community .
+the city was designated as a highway highway system was constructed for the north-north and east of the interstate highway at the state highway in us 131 . md 194 started the county highway was rerouted toward md 194 . in the state
+
+>>> in the second half of the season , the team
+was first one-yard line . in the third round , the game was the next game 's first place in the final game to be the game , and was the first game in the game . the first quarter was the most of the finals of the
+
+>>> the album was released in
+july 1992 , and was released in december 2005 , 2003 . a single was released on july 24 , 2014 . in the album was certified gold in japan , but remained on january 2013 .
+the album was released in october 2006 , in the same year
+
+>>> scientists have found that the
+project had been the site of the building was the site .
+the building was founded in the construction of the canning dam and the dam . the dam on the dam was built in the dam . the dam was completed in the dam , in the dam
+
+>>> during the war , the army
+corps , which he was sent to a new army troops . the battle of the 10th battalion was appointed in mostar , but the 3rd battalion to attack the 1st infantry rifles regiments division of nevesinje brigade , and then made up as a " defensive battalion " .
+[done] results saved to runs/transformer/results.json

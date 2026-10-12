@@ -1,0 +1,102 @@
+{
+  "model": "transformer",
+  "args": {
+    "model": "transformer",
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/transformer",
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "emb_dim": 300,
+    "hidden_dim": 512,
+    "n_layers": 2,
+    "n_heads": 6,
+    "ff_dim": 1200,
+    "dropout": 0.2,
+    "seq_len": 128,
+    "eval_seq_len": 128,
+    "batch_size": 32,
+    "epochs": 10,
+    "lr": 0.0005,
+    "weight_decay": 0.01,
+    "warmup_steps": 200,
+    "clip": 1.0,
+    "log_interval": 100,
+    "seed": 42,
+    "device": "auto",
+    "embedding_path": null,
+    "freeze_embeddings": false,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "eval_batch_size": 32
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "mps",
+  "size": {
+    "total": 19583513,
+    "trainable": 19583513,
+    "input_embedding": 8673900,
+    "output_layer": 8702813,
+    "body": 2206800,
+    "size_mb_fp32": 74.70517349243164
+  },
+  "train_time_s": 3171.753237251949,
+  "total_wall_s": 3252.078129875008,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 5.0174954304967505,
+  "test_loss": 4.945436048052343,
+  "test_ppl": 140.53211624872878,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 7.862301584042143,
+    "score_tokens_per_s": 31047.015608691967,
+    "gen_tokens_per_s": 24.937536251960513
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "for the community .\nthe city was designated as a highway highway system was constructed for the north-north and east of the interstate highway at the state highway in us 131 . md 194 started the county highway was rerouted toward md 194 . in the state"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "was first one-yard line . in the third round , the game was the next game 's first place in the final game to be the game , and was the first game in the game . the first quarter was the most of the finals of the"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "july 1992 , and was released in december 2005 , 2003 . a single was released on july 24 , 2014 . in the album was certified gold in japan , but remained on january 2013 .\nthe album was released in october 2006 , in the same year"
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "project had been the site of the building was the site .\nthe building was founded in the construction of the canning dam and the dam . the dam on the dam was built in the dam . the dam was completed in the dam , in the dam"
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "corps , which he was sent to a new army troops . the battle of the 10th battalion was appointed in mostar , but the 3rd battalion to attack the 1st infantry rifles regiments division of nevesinje brigade , and then made up as a \" defensive battalion \" ."
+    }
+  ]
+}

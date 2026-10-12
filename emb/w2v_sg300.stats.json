@@ -1,0 +1,54 @@
+{
+  "method": "word2vec skip-gram (gensim)",
+  "params": {
+    "dim": 300,
+    "window": 5,
+    "negative": 5,
+    "sample": 0.001,
+    "epochs": 10,
+    "min_count": 1,
+    "workers": 8,
+    "seed": 42
+  },
+  "train_tokens": 2075677,
+  "sentences": 23767,
+  "train_time_s": 38.44361033302266,
+  "device": "cpu",
+  "coverage": {
+    "types": 1.0,
+    "missing": []
+  },
+  "note": "multi-threaded gensim training is not bit-reproducible",
+  "rescale": {
+    "raw_mean_row_norm": 2.291027545928955,
+    "target_mean_row_norm": 2.8687198162078857,
+    "scale": 1.2521542228095257,
+    "ref_ckpt": "runs/lstm_lr3e-3/best.pt"
+  },
+  "shape": [
+    28913,
+    300
+  ],
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "args": {
+    "method": "w2v",
+    "out": "emb/w2v_sg300.pt",
+    "data_dir": "data/wikitext-2",
+    "ref_ckpt": "runs/lstm_lr3e-3/best.pt",
+    "no_rescale": false,
+    "dim": 300,
+    "window": 5,
+    "negative": 5,
+    "sample": 0.001,
+    "epochs": 10,
+    "workers": 8,
+    "glove_name": "glove-wiki-gigaword-300",
+    "seed": 42
+  }
+}

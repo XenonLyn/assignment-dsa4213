@@ -1,0 +1,110 @@
+{
+  "model": "ngram (interpolated Kneser-Ney, order=4)",
+  "args": {
+    "data_dir": "data/wikitext-2",
+    "out_dir": "runs/ngram",
+    "max_order": 4,
+    "eval_seq_len": 128,
+    "max_train_tokens": null,
+    "no_lowercase": false,
+    "prompts": "prompts.txt",
+    "gen_len": 50,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gen_seed": 1234,
+    "allow_unk": false,
+    "seed": 42
+  },
+  "data": {
+    "train": {
+      "tokens": 2075677,
+      "unk_rate": 0.02631671540439129
+    },
+    "valid": {
+      "tokens": 216347,
+      "unk_rate": 0.05416298657655716
+    },
+    "test": {
+      "tokens": 244102,
+      "unk_rate": 0.06234279274940491
+    },
+    "vocab_size": 28913
+  },
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.11.8",
+    "torch": "2.5.1",
+    "cpu": "Apple M1"
+  },
+  "device": "cpu",
+  "size": {
+    "raw_entries": 3804292,
+    "continuation_entries": 1993036,
+    "total": 5797328
+  },
+  "model_file_mb": 81.08110618591309,
+  "discounts": {
+    "raw": {
+      "1": 0.75,
+      "2": 0.6968174023316472,
+      "3": 0.8339582819258894,
+      "4": 0.9161119522831294
+    },
+    "cont": {
+      "1": 0.18874419997006436,
+      "2": 0.7253986748517469,
+      "3": 0.8631875831535881
+    }
+  },
+  "valid_by_order": {
+    "1": {
+      "loss": 6.707299665616795,
+      "ppl": 818.3578133688726
+    },
+    "2": {
+      "loss": 5.615958833657336,
+      "ppl": 274.7767180916656
+    },
+    "3": {
+      "loss": 5.46301878738926,
+      "ppl": 235.8082058144138
+    },
+    "4": {
+      "loss": 5.4360984856140355,
+      "ppl": 229.54486156212394
+    }
+  },
+  "best_order": 4,
+  "train_time_s": 4.72858058399288,
+  "test_loss": 5.378635591097418,
+  "test_ppl": 216.72637021405617,
+  "test_tokens": 244101,
+  "inference": {
+    "score_time_s": 0.8753651660517789,
+    "score_tokens_per_s": 278856.1956388851,
+    "gen_tokens_per_s": 406.0143179835933
+  },
+  "generations": [
+    {
+      "prompt": "the history of the city",
+      "continuation": "have included andy murray in the final . federer won the year-end championships for the game . he was named in a one-man show the film being screened at a time when the allied forces and material . this test brought about by a song that"
+    },
+    {
+      "prompt": "in the second half of the season , the team",
+      "continuation": "of the year : 2007 – 08 season , which was to be the first , in his review of the original film . at this time , the first of which in the english channel and the north west company had been . the first leg 2 – 0"
+    },
+    {
+      "prompt": "the album was released in",
+      "continuation": "late 1977 . the loss of the physical world of democratic union with the american society of composers . a study has become the city of nijmegen , and other small gold coins to circulate were recorded the first-class matches , and was a strong , developed in"
+    },
+    {
+      "prompt": "scientists have found that the",
+      "continuation": "episode was \" the best song of the night , and the first in the super mario land 's shooter of the missouri river and the two-year-old child in the early 1980s , mosley was a large , one-third of the force of the"
+    },
+    {
+      "prompt": "during the war , the army",
+      "continuation": "issued . \" the song was released as the album 's most successful in his own words , \" a new badge , a new york times in the first division was tasked primarily with a variety of the album to be certified gold by the recording industry association of"
+    }
+  ]
+}

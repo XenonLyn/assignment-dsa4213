@@ -23,10 +23,16 @@ class RecurrentLM(nn.Module):
             self.rnn = nn.RNN(emb_dim, hidden_dim, n_layers, nonlinearity="tanh",
                               batch_first=True, dropout=dropout if n_layers > 1 else 0.0)
         elif cell == "lstm":
-            self.rnn = nn.LSTM(emb_dim, hidden_dim, n_layers, batch_first=True,
-                               dropout=dropout if n_layers > 1 else 0.0)
+            # One single-layer nn.LSTM per layer with an explicit nn.Dropout in between.
+            # PyTorch 2.5's MPS kernel for a multi-layer nn.LSTM does not resample its
+            # built-in inter-layer dropout and can reuse the train-mode graph in eval
+            # mode (wrong validation/test loss); see check_dropout_and_eval below.
+            self.layers = nn.ModuleList(
+                nn.LSTM(emb_dim if i == 0 else hidden_dim, hidden_dim, batch_first=True)
+                for i in range(n_layers))
         else:
             raise ValueError(cell)
+        self.cell = cell
         self.drop = nn.Dropout(dropout)
         self.head = nn.Linear(hidden_dim, vocab_size)
         nn.init.uniform_(self.embedding.weight, -0.1, 0.1)
@@ -34,8 +40,16 @@ class RecurrentLM(nn.Module):
             self.embedding.weight[PAD].zero_()
 
     def hidden_states(self, x, state=None):
-        out, state = self.rnn(self.drop(self.embedding(x)), state)
-        return out, state
+        h = self.drop(self.embedding(x))
+        if self.cell == "rnn":
+            return self.rnn(h, state)
+        new_state = []  # LSTM state: one (h, c) tuple per layer
+        for i, layer in enumerate(self.layers):
+            if i > 0:
+                h = self.drop(h)
+            h, s = layer(h, None if state is None else state[i])
+            new_state.append(s)
+        return h, new_state
 
     def forward(self, x, state=None):
         out, state = self.hidden_states(x, state)
@@ -100,6 +114,27 @@ def count_params(model):
     return {"total": total, "trainable": trainable, "input_embedding": emb,
             "output_layer": head, "body": total - emb - head,
             "size_mb_fp32": total * 4 / 2**20}
+
+
+@torch.no_grad()
+def check_dropout_and_eval(model, vocab_size, device, B=4, T=16):
+    """Train mode must resample dropout on every call, and eval mode must match a CPU
+    reference even right after a train-mode forward of the same shape (guards
+    against the MPS multi-layer nn.LSTM bug described in RecurrentLM)."""
+    import copy
+    was_training = model.training
+    x = torch.randint(3, vocab_size, (B, T), device=device)
+    model.train()
+    a, _ = model(x)
+    b, _ = model(x)
+    resampled = not torch.allclose(a, b)
+    model.eval()
+    e, _ = model(x)
+    ref = copy.deepcopy(model).cpu().eval()
+    r, _ = ref(x.cpu())
+    eval_ok = torch.allclose(e.float().cpu(), r, atol=1e-3, rtol=1e-3)
+    model.train(was_training)
+    return {"dropout_resampled": bool(resampled), "eval_matches_cpu": bool(eval_ok)}
 
 
 @torch.no_grad()
