@@ -5,6 +5,9 @@
   Results and discussion: [`PART1_RESULTS.md`](PART1_RESULTS.md).
 * **Part II** — the Part I LSTM with three input-embedding settings: random/trainable, own Skip-gram
   (frozen), public GloVe (frozen). Results and discussion: [`PART2_RESULTS.md`](PART2_RESULTS.md).
+* **Part III** — AG News topic classification with frozen representations from the five LMs (mean vs
+  last-token pooling) plus context-free and TF-IDF baselines. Results and discussion:
+  [`PART3_RESULTS.md`](PART3_RESULTS.md).
 
 ## Setup
 ```bash
@@ -21,6 +24,10 @@ work (`--device cpu|cuda|mps`).
 * **GloVe 6B 300d** (Part II; Pennington et al., 2014; Wikipedia 2014 + Gigaword 5), downloaded by
   `embeddings.py glove` through `gensim.downloader` (`glove-wiki-gigaword-300`, ~394 MB, cached in
   `~/gensim-data/`). Not redistributed here.
+* **AG News** (Part III; Zhang et al., 2015; academic/non-commercial use), downloaded by `downstream.py`
+  from the HuggingFace Hub (`fancyzhx/ag_news`, ~19 MB) into `data/ag_news/{train,test}.jsonl`.
+  A balanced 20k/5k train/validation subset of the official training set is drawn with seed 42; the
+  official 7.6k test set is used for evaluation. Preprocessing mimics WikiText-2 (see `downstream.tokenize`).
 
 Preprocessing (`common.py`): lowercase, whitespace tokenisation, `<eos>` at the end of every non-empty
 line, empty lines dropped. The vocabulary (28,913 types) is built on the training split only;
@@ -63,6 +70,10 @@ python train_neural.py --model lstm --lr 3e-3 --embedding_path emb/glove6b300.pt
     --out_dir runs/lstm_glove_frozen
 python analyze_part2.py --runs random=runs/lstm_lr3e-3 w2v_frozen=runs/lstm_w2v_frozen \
     glove_frozen=runs/lstm_glove_frozen
+
+# ---- Part III (frozen LMs, logistic regression; ~10 min on the M1)
+python downstream.py --runs rnn=runs/rnn lstm=runs/lstm_lr3e-3 lstm_w2v=runs/lstm_w2v_frozen \
+    lstm_glove=runs/lstm_glove_frozen transformer=runs/transformer
 ```
 Shell scripts that ran these in sequence: `run_part1.sh` (n-gram, RNN, Transformer), `run_part1_lr.sh`
 (RNN lr 3e-3), `run_lstm_fix.sh` (all LSTM runs incl. Part II, LR selection, embedding tables, and a
@@ -72,7 +83,9 @@ Outputs: each run writes `results.json` (test CE/PPL, parameter counts, training
 throughput, hardware, generations); neural runs also `history.json` (per-epoch train/val loss, grad
 norms, step log) and `best.pt`. `summarize.py` → `runs/summary/{loss_curves.png,table.md,generations.md}`;
 `analyze_part2.py` → `runs/part2/{curves.png,freq_buckets.md,neighbours.md,stability.md,diversity.md}`;
-`embeddings.py` → `emb/*.stats.json` (coverage, missing words, build time, rescaling).
+`embeddings.py` → `emb/*.stats.json` (coverage, missing words, build time, rescaling);
+`downstream.py` → `runs/part3/{table.md,learning_curve.md,confusion.md,errors.md,unk_bins.md,
+ppl_vs_acc_and_curve.png,results.json}`.
 Checkpoints, embedding tables and data are not in the repository (see `.gitignore`); rerun the commands.
 
 ## Configuration
@@ -90,6 +103,11 @@ n-gram: interpolated Kneser-Ney, orders 1–4 scored on validation, order 4 sele
 Skip-gram (`embeddings.py`): dim 300, window 5, 5 negatives, subsampling 1e-3, min_count 1, 10 epochs,
 8 workers, seed 42. Frozen tables are rescaled by one scalar to the mean row norm of the learned table
 of `runs/lstm_lr3e-3`; GloVe-missing words get N(μ_d, σ_d) vectors (seed 42), `<pad>` = 0.
+
+Part III classifier (identical for every representation): `StandardScaler` + multinomial
+`LogisticRegression` (scikit-learn), C ∈ {0.01, 0.1, 1, 10} selected on validation accuracy; documents are
+truncated to the 128-token LM context; features are mean-pooled (padding excluded) or last-token
+(`<eos>`) top-layer states of the frozen LMs.
 
 Decoding (identical for all models, `common.sample_next`): temperature 0.8, top-k 40, 50 new tokens,
 `<pad>` and `<unk>` banned, the same RNG seed per prompt (`--gen_seed` 1234 + prompt index).
@@ -115,6 +133,7 @@ Prompts are in `prompts.txt`.
   `runs/archive_mps_lstm_bug/` for reference only.
 
 ## Attribution
-* Data: WikiText-2 (Merity et al., 2016, CC BY-SA); GloVe (Pennington et al., 2014).
-* Libraries: PyTorch, HuggingFace `datasets`, gensim, NumPy, matplotlib.
+* Data: WikiText-2 (Merity et al., 2016, CC BY-SA); GloVe (Pennington et al., 2014); AG News
+  (Zhang, Zhao & LeCun, 2015).
+* Libraries: PyTorch, HuggingFace `datasets`, gensim, scikit-learn, SciPy, NumPy, matplotlib.
 * Code written with assistance from Claude (Anthropic). Cite any course notebooks you adapt here.

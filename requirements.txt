@@ -1,4 +1,8 @@
-torch>=2.1
-numpy
-datasets
-matplotlib
+# tested versions in comments (Apple M1, Python 3.11)
+torch>=2.1          # 2.5.1
+numpy               # 1.26.4
+datasets            # 2.18.0
+matplotlib          # 3.8.0
+gensim>=4.0         # 4.3.0  (Part II: Skip-gram, GloVe download)
+scikit-learn>=1.2   # 1.9.1  (Part III: classifiers)
+scipy               # 1.10.0 (Part III: Spearman correlation)
