@@ -12,3 +12,13 @@ runs_*.out
 .venv/
 __pycache__/
 .DS_Store
+
+# LaTeX build files (report/report.pdf itself is kept)
+report/*.aux
+report/*.log
+report/*.fls
+report/*.fdb_latexmk
+report/*.out
+report/*.synctex.gz
+# personal build (name / student ID) - never committed
+report/private/

@@ -75,6 +75,11 @@ python analyze_part2.py --runs random=runs/lstm_lr3e-3 w2v_frozen=runs/lstm_w2v_
 python downstream.py --runs rnn=runs/rnn lstm=runs/lstm_lr3e-3 lstm_w2v=runs/lstm_w2v_frozen \
     lstm_glove=runs/lstm_glove_frozen transformer=runs/transformer
 ```
+Report (`report/report.pdf`): figures are drawn from the saved results, then LaTeX is compiled:
+```bash
+python report/make_figures.py
+cd report && latexmk -pdf report.tex
+```
 Shell scripts that ran these in sequence: `run_part1.sh` (n-gram, RNN, Transformer), `run_part1_lr.sh`
 (RNN lr 3e-3), `run_lstm_fix.sh` (all LSTM runs incl. Part II, LR selection, embedding tables, and a
 fresh-process re-evaluation check). Quick pipeline check: add `--max_train_tokens 200000 --epochs 1`.
